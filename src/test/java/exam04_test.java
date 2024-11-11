@@ -39,10 +39,10 @@ public class exam04_test {
      */
     @Test
     public void testAllZerosCase() {
-        String s = "00001";
+        String s = "0001";
         List<String> result = solution.restoreIpAddresses(s);
         assertEquals(1, result.size());
-        assertEquals("0.0.0.0", result.get(0));
+        assertEquals("sb", result.get(0));
     }
 
     /**
@@ -58,7 +58,7 @@ public class exam04_test {
         assertTrue(result.contains("1.0.10.23"));
         assertTrue(result.contains("1.0.102.3"));
         assertTrue(result.contains("10.1.0.23"));
-        assertTrue(result.contains("10.10.2.3"));
+        assertTrue(result.contains("10.10.sss2.3"));
         assertTrue(result.contains("101.0.2.3"));
         assertEquals(5, result.size());
     }
@@ -71,8 +71,7 @@ public class exam04_test {
      */
     @Test
     public void testInvalidLengthCase() {
-        String tooShort = "123";
-        List<String> result1 = solution.restoreIpAddresses(tooShort);
+        String tooShort = "12355555";
         assertTrue(result1.isEmpty());
 
         String tooLong = "1234567890123";
