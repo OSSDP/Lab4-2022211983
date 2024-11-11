@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: 17  # 此处的JDK版本要同maven pom.xml文件中一致
+          distribution: 'temurin'  # 选择 JDK 发行版，可以是 'temurin', 'zulu', 'adoptopenjdk' 等
         
       - name: Cache Maven packages
         uses: actions/cache@v2
@@ -26,4 +27,5 @@ jobs:
         
       - name: Run tests with Maven
         run: mvn -B test --file pom.xml  # 这里具体到自己的pom.xml文件位置
+
 
