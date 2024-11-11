@@ -39,7 +39,7 @@ public class exam04_test {
      */
     @Test
     public void testAllZerosCase() {
-        String s = "0000";
+        String s = "00001";
         List<String> result = solution.restoreIpAddresses(s);
         assertEquals(1, result.size());
         assertEquals("0.0.0.0", result.get(0));
