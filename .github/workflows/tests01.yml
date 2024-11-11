@@ -3,7 +3,7 @@ name: tests01
 on: 
   push:
     branches:
-      - main  # 可以指定具体的分支，如果是其他分支，替换为对应的分支名
+      - master  # 可以指定具体的分支，如果是其他分支，替换为对应的分支名
 
 jobs:
   run_tests:
